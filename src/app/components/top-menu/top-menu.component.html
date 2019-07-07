@@ -1,0 +1,17 @@
+<div class="menu-container">
+  <div class="left-col">
+    <div class="app-title" (click)="navigateToMain()">
+      <div>Здоровая</div>
+      <div>семья</div>
+    </div>
+    <div class="app-menu">
+      <a class="menu-item" routerLink="/app/me" routerLinkActive="link-active">Моя Страница</a>
+      <a class="menu-item" routerLink="/app/family" routerLinkActive="link-active">Семья</a>
+      <a class="menu-item" routerLink="/app/help" routerLinkActive="link-active">Помощь</a>
+    </div>
+  </div>
+  <div class="profile-link" routerLink="/app/profile">
+    <div class="avatar"></div>
+    <div class="name">Даниил Баунов</div>
+  </div>
+</div>

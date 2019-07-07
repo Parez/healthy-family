@@ -1,0 +1,59 @@
+<div class="login-register">
+  <div (click)="onLogin()">Войти</div>
+  <div (click)="onRegister()">Зарегистрироваться</div>
+</div>
+
+<div class="register-screen">
+  <div>
+    <label for="emailInput">E-Mail</label>
+    <div class="input-group input-group-lg login-input">
+
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">@</span>
+      </div>
+      <input id="emailInput" type="email" [(ngModel)]="email"
+             class="form-control"
+             placeholder="E-Mail"
+             aria-label="email"
+             aria-describedby="basic-addon1">
+    </div>
+
+    <label for="emailInput">Пароль</label>
+    <div class="input-group input-group-lg login-input">
+
+      <input id="passwordInput" type="password" [(ngModel)]="password"
+             class="form-control" placeholder="Пароль" aria-label="password">
+    </div>
+
+    <ng-container *ngIf="state === 'register'">
+      <label for="nameInput">ФИО</label>
+      <div class="input-group input-group-lg login-input">
+
+        <input id="nameInput" type="text" [(ngModel)]="name"
+               class="form-control" placeholder="ФИО" aria-label="name">
+      </div>
+
+      <label for="snilsInput">СНИЛС</label>
+      <div class="input-group input-group-lg login-input">
+
+        <input id="snilsInput" type="text" [(ngModel)]="snils"
+               class="form-control" placeholder="Укажите ваш СНИЛС" aria-label="snils">
+      </div>
+
+      <label for="phoneInput">Телефон</label>
+      <div class="input-group input-group-lg login-input">
+
+        <input id="phoneInput" type="tel" [(ngModel)]="phone"
+               class="form-control" placeholder="Телефон" aria-label="phone">
+      </div>
+    </ng-container>
+  <button class="login-btn btn btn-lg btn-primary login-btn" *ngIf="state === 'register'" (click)="register()">
+    Зарегистрироваться
+  </button>
+  <button class="login-btn btn btn-lg btn-primary login-btn" *ngIf="state === 'login'" (click)="login()">
+    Войти
+  </button>
+</div>
+
+
+

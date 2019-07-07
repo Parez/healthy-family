@@ -1,0 +1,64 @@
+@import "../../../variables.scss";
+
+.menu-container {
+  border-bottom: 1px solid $light-grey-24;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  .left-col {
+    display: flex;
+    align-items: center;
+    .app-title {
+      width: 319px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      background: $green-text;
+      font-size: 28px;
+      line-height: 32px;
+      letter-spacing: 0.01em;
+      color: $dark-grey;
+      font-weight: bold;
+      padding: 20px;
+      margin-right: 64px;
+      cursor: pointer;
+    }
+    .app-menu {
+      .menu-item {
+        font-size: 20px;
+        color: black;
+        margin-right: 40px;
+        &:hover {
+          text-decoration: none;
+          color: $dark-grey;
+        }
+        &.link-active {
+          color: $green-text;
+        }
+      }
+    }
+  }
+
+  .profile-link {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    .avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 100%;
+      background: $placeholder-color;
+      margin-right: 12px;
+    }
+    .name {
+      width: 97px;
+      color: black;
+      font-size: 20px;
+    }
+  }
+
+}

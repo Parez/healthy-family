@@ -1,0 +1,7 @@
+<div class="family-container">
+  <div class="family-title">{{family.name}}:</div>
+  <div class="members-list">
+    <app-family-list-item *ngFor="let member of family.members" [member]="member">
+    </app-family-list-item>
+  </div>
+</div>
